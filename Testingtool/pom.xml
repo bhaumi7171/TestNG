@@ -3,4 +3,9 @@
   <groupId>com.obsqura</groupId>
   <artifactId>Testingtool</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies><dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.25.0</version></dependency>
+  </dependencies>
 </project>
