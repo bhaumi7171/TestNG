@@ -5,9 +5,9 @@
     <classes>
       <class name="testscript.Login_Pagetest">
         <methods>
-          <include name="verifyUserIsAbleToLoginValidCredenstials"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
+          <include name="UserAbleToLoginWithProvider"/>
         </methods>
       </class> <!-- testscript.Login_Pagetest -->
     </classes>

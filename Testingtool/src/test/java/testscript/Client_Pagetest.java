@@ -18,11 +18,25 @@ public class Client_Pagetest extends Base {
 	  login.clickLoginButton();
 	  Client_Page client=new Client_Page(driver);
 	  client.client();
-	  client.clientSearch("Astar Logisticss123");
-	    client.clientId("1");
-	    client.searchButton();
-	    boolean isclientsearchdone=client.isclientsearchisloaded();
-	    assertTrue(isclientsearchdone, "search is not done");
-	    System.out.println("Search is done ||  "+isclientsearchdone);
-  }
+	  client.clientName("Astar Logisticss123");
+	  client.clientId("1");
+	  client.searchButton();
+	  boolean isclientsearchdone=client.isclientsearchisloaded();
+	  assertTrue(isclientsearchdone, "search is not done");
+	 // System.out.println("Search is done ||  "+isclientsearchdone);
+	  
+  }/*
+  @Test
+  public void userAbleToSearchSecondly() throws AWTException
+  {
+	  Client_Page client1=new Client_Page(driver); 
+	  client1.resetButton();
+	  client1.searchButton();
+	  client1.clientName("Bimal mathew");
+	  client1.clientId("8"); 
+	  client1.searchButton();
+	  boolean issecondsearchdone=client1.isclientsearchisloaded();
+	  assertTrue(issecondsearchdone, " search is not done");
+	 // System.out.println(" Second Search Is Done || "+issecondsearchdone);
+  }*/
 }

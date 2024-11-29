@@ -12,6 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login_Page {
 	public WebDriver driver;
@@ -36,13 +38,13 @@ public void enterPasswordField(String passwordfield)
 {
 	password.sendKeys(passwordfield);
 }
-public void clickLoginButton() throws AWTException 
+public void clickLoginButton() throws AWTException
 {
+	WebDriverWait loginwait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	loginwait.until(ExpectedConditions.elementToBeClickable(login));
 	login.click();
 	
-Robot robot=new Robot();
-robot.delay(1000);
-	
+
 	//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 	} 
 public boolean isDashboardIsLoaded()

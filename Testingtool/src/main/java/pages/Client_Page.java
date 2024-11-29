@@ -23,7 +23,7 @@ public class Client_Page {
 	@FindBy(id="clientsearch-client_name") WebElement clientname;
 	@FindBy(id="clientsearch-id") WebElement clientid;
 	@FindBy(xpath="//button[@class='btn btn-primary']") WebElement search;
-	
+	@FindBy(xpath="//button[@class='btn btn-default']") WebElement reset;
 	public void enterUsernameField(String usernamefield)
 	{
 		username.sendKeys(usernamefield);
@@ -42,7 +42,7 @@ public class Client_Page {
 	{
 		client.click();
 	}
-	public void clientSearch(String clientnamefield)
+	public void clientName(String clientnamefield)
 	{
 		
 		clientname.sendKeys(clientnamefield);
@@ -60,4 +60,14 @@ public class Client_Page {
 	{
 		return search.isDisplayed();
 	}
+	public void resetButtonClick()
+	{
+		reset.click();
+	}
+	public boolean resetButton()
+	{
+		return reset.isSelected();
+	}
+	
+	
 }
